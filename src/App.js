@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+//bootstrap
+import 'bootstrap/dist/css/bootstrap.css';
 
 // Components
 import ChannelSection from './components/channels/ChannelSection'
 
 class App extends Component {
   constructor(props){
+    super(props)
     this.state = {
       channels: []
     }
@@ -26,12 +29,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <ChannelSection 
-          channels={this.state.channels}
-          addChannel={this.addChannel}
-        />
-      </div>
+       <div className='app'>
+        <div className='nav'>
+          <ChannelSection 
+            {...this.state}
+            addChannel={this.addChannel.bind(this)}
+            setChannel={this.setChannel.bind(this)}
+          />         
+        </div>
+       </div>
     );
   }
 }

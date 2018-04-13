@@ -1,27 +1,17 @@
 {
   "name": "react-go-db",
-  "version": "1.0.0",
-  "description": "React go and couchDB chat application",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rotohun/react-go-db.git"
-  },
-  "keywords": [
-    "React",
-    "CouchDB",
-    "GOLANG",
-    "GO",
-    "DB",
-    "Chat"
-  ],
-  "author": "Ronald Hunter",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rotohun/react-go-db/issues"
-  },
-  "homepage": "https://github.com/rotohun/react-go-db#readme"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }

@@ -11,9 +11,11 @@ export default class ChannelList extends Component {
       <ul>
         {
             this.props.channels.map( x => {
-                <Channel
+               return <Channel
                     channel={x}
                     setChannel = {this.props.setChannel}
+                    key={x.id}
+                    {...this.props}
                 />
             })
         }

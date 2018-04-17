@@ -16,6 +16,10 @@
   height: 100vh;
 }
 
+.panel{
+  margin-bottom: 0;
+}
+
 .support, .users{
   height: 50vh;
   margin-bottom: 0;

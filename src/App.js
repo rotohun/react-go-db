@@ -9,6 +9,7 @@ import './App.css';
 // Components
 import ChannelSection from './components/channels/ChannelSection'
 import UserSection from './components/users/UserSection'
+import MessageSection from './components/messages/MessageSection'
 
 class App extends Component {
   constructor(props){
@@ -16,6 +17,7 @@ class App extends Component {
     this.state = {
       channels: [],
       users: [],
+      messages: [],
       activeChannel: {},
       activeUser: {}
     }
@@ -45,6 +47,12 @@ class App extends Component {
     // TODO: Get Users Messages
   }
 
+  sendMessage = (message) => {
+    let {messages} = this.state
+    messages.push({id: messages.length, message})
+    this.setState({message})
+  }
+
   render() {
     return (
        <div className='app'>
@@ -60,6 +68,10 @@ class App extends Component {
             setUser={this.setUser.bind(this)}
           />     
         </div>
+        <MessageSection
+          {...this.state}
+          sendMessage={this.sendMessage.bind(this)}
+        />
        </div>
     );
   }
